@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pocsag pager message sender (439.98Mhz)</title>
+</head>
+<body>
+    <h1>Pocsag pager message sender (439.98Mhz)</h1>
+    <form id="command-form">
+        <label for="user-input">Enter message:</label>
+        <input type="text" id="user-input" name="user-input">
+        <input type="submit" value="Send">
+    </form>
+    <p>Note: It will take 5 to 10 seconds for the program to send the message</p>
+<!--
+    <div id="output-container">
+        <h2>Debug output:</h2>
+        <pre id="output"></pre>
+    </div>
+-->
+    <script>
+        document.getElementById("command-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            executeCommand();
+        });
+
+        function executeCommand() {
+            const userInput = document.getElementById("user-input").value;
+            const command = `sh ./mesg-pocsag.sh "${userInput}"`;
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        document.getElementById("output").textContent = xhr.responseText;
+                    } else {
+                        document.getElementById("output").textContent = "Error executing command.";
+                    }
+                }
+            };
+            xhr.open("POST", "/execute", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send("command=" + encodeURIComponent(command));
+        }
+    </script>
+</body>
+</html>
