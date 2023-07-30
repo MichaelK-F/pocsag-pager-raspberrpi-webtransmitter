@@ -54,6 +54,10 @@ Once that is done you will need to go to the bottom of the file and type in this
 Once it has been typed in press ```Ctrl + x``` then ```y``` then ```Enter```(Optional) set to automaticly start on boot:
 To make the changes take effect run ```sudo reboot```
 
+#### Accessing the website
+To access the website go to ```http://youripadress:8080```
+To find your ip adress type in ```hostname -I```
+
 
 
 ### Feel free to contribute to the repo
