@@ -22,6 +22,11 @@ pip3 install flask
 cd /
 sudo git clone https://github.com/MichaelK-F/pocsag-pager-raspberrpi-webtransmitter.git
 ```
+##### Allowing execution of the files:
+```
+cd /pocsag-pager-raspberrpi-webtransmitter
+sudo chmod 666 *
+```
 ##### Starting the server:
 ```
 cd /pocsag-pager-raspberrpi-webtransmitter
@@ -54,9 +59,13 @@ Once that is done you will need to go to the bottom of the file and type in this
 Once it has been typed in press ```Ctrl + x``` then ```y``` then ```Enter```(Optional) set to automaticly start on boot:
 To make the changes take effect run ```sudo reboot```
 
+#### Connecting the antena
+Plug a wire on GPIO 4, means Pin 7 of the GPIO header. This acts as the antenna. The optimal length of the wire depends the frequency you want to transmit on, but it works with a few centimeters for local testing.
+
 #### Accessing the website
 To access the website go to ```http://youripadress:8080```
 To find your ip adress type in ```hostname -I```
+
 
 
 
