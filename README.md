@@ -28,13 +28,16 @@ cd /pocsag-pager-raspberrpi-webtransmitter
 python3 app.py
 ```
 
+
+
+
+
 ##### (Optional) set to automaticly start on boot:
-```
-crontab -e(Optional) set to automaticly start on boot:
 ```
 crontab -e
 ```
 You will get a message that looks like this:
+
 ```
 Select an editor.  To change later, run 'select-editor'.
   1. /bin/nano        <---- easiest
@@ -49,40 +52,6 @@ Once that is done you will need to go to the bottom of the file and type in this
 @reboot python3 /pocsag-pager-raspberrpi-webtransmitter/app.py
 ```
 Once it has been typed in press ```Ctrl + x``` then ```y``` then ```Enter```(Optional) set to automaticly start on boot:
-```
-crontab -e
-```
-You will get a message that looks like this:
-```
-Select an editor.  To change later, run 'select-editor'.
-  1. /bin/nano        <---- easiest
-  2. /usr/bin/vim.tiny
-  3. /bin/ed
-
-Choose 1-3 [1]:
-```
-Unless you know exactly what you are doing, select ```1```
-Once that is done you will need to go to the bottom of the file and type in this:
-```
-@reboot python3 /pocsag-pager-raspberrpi-webtransmitter/app.py
-```
-Once it has been typed in press ```Ctrl + x``` then ```y``` then ```Enter```
-```
-You will get a message that looks like this:
-```
-Select an editor.  To change later, run 'select-editor'.
-  1. /bin/nano        <---- easiest
-  2. /usr/bin/vim.tiny
-  3. /bin/ed
-
-Choose 1-3 [1]:
-```
-Unless you know exactly what you are doing, select ```1```
-Once that is done you will need to go to the bottom of the file and type in this:
-```
-@reboot python3 /pocsag-pager-raspberrpi-webtransmitter/app.py
-```
-Once it has been typed in press ```Ctrl + x``` then ```y``` then ```Enter```
 To make the changes take effect run ```sudo reboot```
 
 
