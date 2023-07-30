@@ -20,7 +20,7 @@ pip3 install flask
 ##### Copy this repository to the device:
 ```
 cd /
-sudo git clone 
+sudo git clone https://github.com/MichaelK-F/pocsag-pager-raspberrpi-webtransmitter.git
 ```
 ##### Starting the server:
 ```
