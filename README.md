@@ -68,5 +68,7 @@ To find your ip adress type in ```hostname -I```
 
 ### Feel free to contribute to the repo
 
-
+### Credits:
+Actual program that sends the pocsag messages: https://github.com/F5OEO/rpitx
+Icon: Pager by iconfield from Noun Project (CC BY 3.0)
 
